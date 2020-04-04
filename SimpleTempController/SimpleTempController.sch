@@ -1,0 +1,710 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:arduino_nano
+LIBS:lm35
+LIBS:spdtrelay
+LIBS:SimpleTempController-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Arduino_Nano A1
+U 1 1 5E0DFFF5
+P 3800 3400
+F 0 "A1" H 3800 3400 60  0000 C CNN
+F 1 "Arduino_Nano" H 3800 3550 60  0000 C CNN
+F 2 "SimpleTempController:arduino_nano" H 3850 1650 60  0000 C CNN
+F 3 "" H 3800 3400 60  0000 C CNN
+	1    3800 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR1
+U 1 1 5E0E0218
+P 2900 4600
+F 0 "#PWR1" H 2900 4350 50  0001 C CNN
+F 1 "GND" H 2900 4450 50  0000 C CNN
+F 2 "" H 2900 4600 50  0001 C CNN
+F 3 "" H 2900 4600 50  0001 C CNN
+	1    2900 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR5
+U 1 1 5E0E02E6
+P 6250 1200
+F 0 "#PWR5" H 6250 1050 50  0001 C CNN
+F 1 "+5V" H 6250 1340 50  0000 C CNN
+F 2 "" H 6250 1200 50  0001 C CNN
+F 3 "" H 6250 1200 50  0001 C CNN
+	1    6250 1200
+	1    0    0    -1  
+$EndComp
+Text Notes 7300 7000 0    60   ~ 0
+Simple Temperature Controller Module\nby D. Marks KW4TI\nCC-BY-SA 4.0
+$Comp
+L SW_Push SW2
+U 1 1 5E0E30F4
+P 6000 4050
+F 0 "SW2" H 6050 4150 50  0000 L CNN
+F 1 "SW_Push" H 6000 3990 50  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm" H 6000 4250 50  0001 C CNN
+F 3 "" H 6000 4250 50  0001 C CNN
+	1    6000 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW3
+U 1 1 5E0E31E3
+P 6000 4350
+F 0 "SW3" H 6050 4450 50  0000 L CNN
+F 1 "SW_Push" H 6000 4290 50  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm" H 6000 4550 50  0001 C CNN
+F 3 "" H 6000 4550 50  0001 C CNN
+	1    6000 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR6
+U 1 1 5E0E4543
+P 6350 3750
+F 0 "#PWR6" H 6350 3500 50  0001 C CNN
+F 1 "GND" H 6350 3600 50  0000 C CNN
+F 2 "" H 6350 3750 50  0001 C CNN
+F 3 "" H 6350 3750 50  0001 C CNN
+	1    6350 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR7
+U 1 1 5E0E48C7
+P 6350 4050
+F 0 "#PWR7" H 6350 3800 50  0001 C CNN
+F 1 "GND" H 6350 3900 50  0000 C CNN
+F 2 "" H 6350 4050 50  0001 C CNN
+F 3 "" H 6350 4050 50  0001 C CNN
+	1    6350 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR8
+U 1 1 5E0E4BDD
+P 6350 4350
+F 0 "#PWR8" H 6350 4100 50  0001 C CNN
+F 1 "GND" H 6350 4200 50  0000 C CNN
+F 2 "" H 6350 4350 50  0001 C CNN
+F 3 "" H 6350 4350 50  0001 C CNN
+	1    6350 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 2N3904 Q4
+U 1 1 5E7EBFC8
+P 7550 4850
+F 0 "Q4" H 7750 4925 50  0000 L CNN
+F 1 "2N2222A" H 7750 4850 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 7750 4775 50  0001 L CIN
+F 3 "" H 7550 4850 50  0001 L CNN
+	1    7550 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R20
+U 1 1 5E7EC1A3
+P 7100 4850
+F 0 "R20" V 7180 4850 50  0000 C CNN
+F 1 "1k" V 7100 4850 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7030 4850 50  0001 C CNN
+F 3 "" H 7100 4850 50  0001 C CNN
+	1    7100 4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR11
+U 1 1 5E7ECCA3
+P 7650 5100
+F 0 "#PWR11" H 7650 4850 50  0001 C CNN
+F 1 "GND" H 7650 4950 50  0000 C CNN
+F 2 "" H 7650 5100 50  0001 C CNN
+F 3 "" H 7650 5100 50  0001 C CNN
+	1    7650 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5E7FA3B0
+P 6050 3050
+F 0 "R2" V 6130 3050 50  0000 C CNN
+F 1 "1k" V 6050 3050 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5980 3050 50  0001 C CNN
+F 3 "" H 6050 3050 50  0001 C CNN
+	1    6050 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR9
+U 1 1 5E7FA725
+P 6550 3350
+F 0 "#PWR9" H 6550 3100 50  0001 C CNN
+F 1 "GND" H 6550 3200 50  0000 C CNN
+F 2 "" H 6550 3350 50  0001 C CNN
+F 3 "" H 6550 3350 50  0001 C CNN
+	1    6550 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 5E7FC77F
+P 4800 2250
+F 0 "R8" V 4700 2250 50  0000 C CNN
+F 1 "1k" V 4800 2250 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4730 2250 50  0001 C CNN
+F 3 "" H 4800 2250 50  0001 C CNN
+	1    4800 2250
+	-1   0    0    1   
+$EndComp
+Text Notes 6950 3550 0    60   ~ 0
+Any SPST or SPDT normally open\n5 volt coil relay will do.\nThis is a common\nSONGLE SRD5VDC-SL-C
+Text Notes 6500 1600 0    60   ~ 0
+This relay is connected as to\nopen or close the mains power to\nthe incandescent lamp providing heat.
+$Comp
+L SW_Push SW1
+U 1 1 5E0E2FF1
+P 6000 3750
+F 0 "SW1" H 6050 3850 50  0000 L CNN
+F 1 "SW_Push" H 6000 3690 50  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm" H 6000 3950 50  0001 C CNN
+F 3 "" H 6000 3950 50  0001 C CNN
+	1    6000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 5E7FEC21
+P 4800 1800
+F 0 "D1" H 4800 1900 50  0000 C CNN
+F 1 "LED" H 4800 1700 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 4800 1800 50  0001 C CNN
+F 3 "" H 4800 1800 50  0001 C CNN
+	1    4800 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R9
+U 1 1 5E7FF165
+P 5100 2250
+F 0 "R9" V 5000 2250 50  0000 C CNN
+F 1 "1k" V 5100 2250 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5030 2250 50  0001 C CNN
+F 3 "" H 5100 2250 50  0001 C CNN
+	1    5100 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D2
+U 1 1 5E7FF2E8
+P 5100 1800
+F 0 "D2" H 5100 1900 50  0000 C CNN
+F 1 "LED" H 5100 1700 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 5100 1800 50  0001 C CNN
+F 3 "" H 5100 1800 50  0001 C CNN
+	1    5100 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D3
+U 1 1 5E7FF65B
+P 5400 1800
+F 0 "D3" H 5400 1900 50  0000 C CNN
+F 1 "LED" H 5400 1700 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 5400 1800 50  0001 C CNN
+F 3 "" H 5400 1800 50  0001 C CNN
+	1    5400 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R10
+U 1 1 5E7FF8D8
+P 5400 2250
+F 0 "R10" V 5300 2250 50  0000 C CNN
+F 1 "1k" V 5400 2250 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5330 2250 50  0001 C CNN
+F 3 "" H 5400 2250 50  0001 C CNN
+	1    5400 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Speaker LS1
+U 1 1 5E800765
+P 7850 4050
+F 0 "LS1" H 7900 4275 50  0000 R CNN
+F 1 "Speaker" H 7900 4200 50  0000 R CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 7850 3850 50  0001 C CNN
+F 3 "" H 7840 4000 50  0001 C CNN
+	1    7850 4050
+	1    0    0    -1  
+$EndComp
+Text Notes 8150 4250 0    60   ~ 0
+An audio speaker\nor piezo disc can be\nplaced here
+$Comp
+L R R21
+U 1 1 5E7ED06A
+P 7650 4400
+F 0 "R21" V 7730 4400 50  0000 C CNN
+F 1 "100R" V 7650 4400 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7580 4400 50  0001 C CNN
+F 3 "" H 7650 4400 50  0001 C CNN
+	1    7650 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D16
+U 1 1 5E7EE217
+P 7400 4200
+F 0 "D16" H 7400 4300 50  0000 C CNN
+F 1 "1N4148" H 7400 4100 50  0000 C CNN
+F 2 "Diodes_THT:D_DO-41_SOD81_P7.62mm_Horizontal" H 7400 4200 50  0001 C CNN
+F 3 "" H 7400 4200 50  0001 C CNN
+	1    7400 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L R R7
+U 1 1 5E80235F
+P 7150 4250
+F 0 "R7" V 7050 4250 50  0000 C CNN
+F 1 "1k" V 7150 4250 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7080 4250 50  0001 C CNN
+F 3 "" H 7150 4250 50  0001 C CNN
+	1    7150 4250
+	1    0    0    -1  
+$EndComp
+Text Notes 3350 1950 0    60   ~ 0
+This circuit is designed not\nto need a specific display\nthat may not be available.\nThe interface is LED flashes\nand button presses.
+Text Notes 8050 4500 0    60   ~ 0
+Almost any silicon diode will do\n1N4148, 1N4001, etc.
+Text Notes 8050 4750 0    60   ~ 0
+2N3904 or BC548\ncan be substiuted to 2N2222
+Text Notes 3550 5000 0    60   ~ 0
+Arduino Nano V3,\nArduino Nano,\nArduino Uno\ncan be used here
+$Comp
+L LM35 U1
+U 1 1 5E803940
+P 6000 4850
+F 0 "U1" H 5800 4750 60  0000 C CNN
+F 1 "LM35" H 5750 4900 60  0000 C CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 6000 4850 60  0001 C CNN
+F 3 "" H 6000 4850 60  0001 C CNN
+	1    6000 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5E803B4B
+P 5100 5100
+F 0 "R1" V 5000 5100 50  0000 C CNN
+F 1 "1k" V 5100 5100 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5030 5100 50  0001 C CNN
+F 3 "" H 5100 5100 50  0001 C CNN
+	1    5100 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR2
+U 1 1 5E803BDA
+P 4900 5750
+F 0 "#PWR2" H 4900 5500 50  0001 C CNN
+F 1 "GND" H 4900 5600 50  0000 C CNN
+F 2 "" H 4900 5750 50  0001 C CNN
+F 3 "" H 4900 5750 50  0001 C CNN
+	1    4900 5750
+	1    0    0    -1  
+$EndComp
+Text Notes 2600 5850 0    60   ~ 0
+This circuit is designed to use parts\nthat are likely to be on-hand or\navailable with the minimal\nlead time.
+Text Notes 6150 5250 0    60   ~ 0
+This is a\ncommonly\navailable\ntemperature\nsensing IC.
+$Comp
+L Conn_01x01 J1
+U 1 1 5E806726
+P 6350 5450
+F 0 "J1" H 6350 5550 50  0000 C CNN
+F 1 "Conn_01x01" H 6350 5350 50  0000 C CNN
+F 2 "Connectors:1pin" H 6350 5450 50  0001 C CNN
+F 3 "" H 6350 5450 50  0001 C CNN
+	1    6350 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J2
+U 1 1 5E8067EE
+P 6350 5700
+F 0 "J2" H 6350 5800 50  0000 C CNN
+F 1 "Conn_01x01" H 6350 5600 50  0000 C CNN
+F 2 "Connectors:1pin" H 6350 5700 50  0001 C CNN
+F 3 "" H 6350 5700 50  0001 C CNN
+	1    6350 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J4
+U 1 1 5E80685B
+P 6750 5700
+F 0 "J4" H 6750 5800 50  0000 C CNN
+F 1 "Conn_01x01" H 6750 5600 50  0000 C CNN
+F 2 "Connectors:1pin" H 6750 5700 50  0001 C CNN
+F 3 "" H 6750 5700 50  0001 C CNN
+	1    6750 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J3
+U 1 1 5E8068C9
+P 6750 5450
+F 0 "J3" H 6750 5550 50  0000 C CNN
+F 1 "Conn_01x01" H 6750 5350 50  0000 C CNN
+F 2 "Connectors:1pin" H 6750 5450 50  0001 C CNN
+F 3 "" H 6750 5450 50  0001 C CNN
+	1    6750 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L SPDTRelay RLY1
+U 1 1 5E7FD9E2
+P 7100 2650
+F 0 "RLY1" H 7350 2500 60  0000 C CNN
+F 1 "SPDTRelay" H 7100 2950 60  0000 C CNN
+F 2 "SimpleTempController:SRDXXRelay" H 7100 2650 60  0001 C CNN
+F 3 "" H 7100 2650 60  0001 C CNN
+	1    7100 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 2N3904 Q1
+U 1 1 5E7FDB16
+P 6450 3050
+F 0 "Q1" H 6650 3125 50  0000 L CNN
+F 1 "2N2222A" H 6650 3050 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 6650 2975 50  0001 L CIN
+F 3 "" H 6450 3050 50  0001 L CNN
+	1    6450 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D4
+U 1 1 5E7FDE32
+P 6250 2700
+F 0 "D4" H 6250 2800 50  0000 C CNN
+F 1 "1N4148" H 6250 2600 50  0000 C CNN
+F 2 "Diodes_THT:D_DO-41_SOD81_P7.62mm_Horizontal" H 6250 2700 50  0001 C CNN
+F 3 "" H 6250 2700 50  0001 C CNN
+	1    6250 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D5
+U 1 1 5E801A49
+P 5700 1800
+F 0 "D5" H 5700 1900 50  0000 C CNN
+F 1 "LED" H 5700 1700 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 5700 1800 50  0001 C CNN
+F 3 "" H 5700 1800 50  0001 C CNN
+	1    5700 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R13
+U 1 1 5E801A4F
+P 5700 2250
+F 0 "R13" V 5600 2250 50  0000 C CNN
+F 1 "1k" V 5700 2250 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5630 2250 50  0001 C CNN
+F 3 "" H 5700 2250 50  0001 C CNN
+	1    5700 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Conn_01x01 J5
+U 1 1 5E8029E2
+P 6550 1950
+F 0 "J5" H 6550 2050 50  0000 C CNN
+F 1 "Conn_01x01" H 6550 1850 50  0000 C CNN
+F 2 "Connectors:1pin" H 6550 1950 50  0001 C CNN
+F 3 "" H 6550 1950 50  0001 C CNN
+	1    6550 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x01 J6
+U 1 1 5E802BA5
+P 7700 1950
+F 0 "J6" H 7700 2050 50  0000 C CNN
+F 1 "Conn_01x01" H 7700 1850 50  0000 C CNN
+F 2 "Connectors:1pin" H 7700 1950 50  0001 C CNN
+F 3 "" H 7700 1950 50  0001 C CNN
+	1    7700 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR10
+U 1 1 5E80C2D0
+P 7650 3750
+F 0 "#PWR10" H 7650 3600 50  0001 C CNN
+F 1 "+5V" H 7650 3890 50  0000 C CNN
+F 2 "" H 7650 3750 50  0001 C CNN
+F 3 "" H 7650 3750 50  0001 C CNN
+	1    7650 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C1
+U 1 1 5E810ED1
+P 4900 5500
+F 0 "C1" H 4910 5570 50  0000 L CNN
+F 1 "100 nF" H 4910 5420 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4900 5500 50  0001 C CNN
+F 3 "" H 4900 5500 50  0001 C CNN
+	1    4900 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4300 2900 4600
+Wire Wire Line
+	2900 4300 3150 4300
+Wire Wire Line
+	4500 3550 5700 3550
+Wire Wire Line
+	4500 2850 5100 2850
+Wire Wire Line
+	4500 2550 4800 2550
+Wire Wire Line
+	6350 3750 6200 3750
+Wire Wire Line
+	6350 4050 6200 4050
+Wire Wire Line
+	5750 4050 5800 4050
+Wire Wire Line
+	5700 4350 5800 4350
+Wire Wire Line
+	4500 2950 5400 2950
+Wire Wire Line
+	7350 4850 7250 4850
+Wire Wire Line
+	6950 4850 6800 4850
+Wire Wire Line
+	7650 5100 7650 5050
+Wire Wire Line
+	7650 4550 7650 4650
+Wire Wire Line
+	7650 4150 7650 4250
+Wire Wire Line
+	7650 3750 7650 4050
+Wire Wire Line
+	7400 4350 7400 4600
+Wire Wire Line
+	7150 4600 7650 4600
+Connection ~ 7650 4600
+Wire Wire Line
+	7400 4050 7400 4000
+Wire Wire Line
+	7150 4000 7650 4000
+Connection ~ 7650 4000
+Wire Wire Line
+	6550 3350 6550 3250
+Wire Wire Line
+	6200 3050 6250 3050
+Wire Wire Line
+	5600 3050 5900 3050
+Wire Wire Line
+	3050 1350 3050 3100
+Wire Wire Line
+	4800 1950 4800 2100
+Wire Wire Line
+	4800 1350 4800 1650
+Wire Wire Line
+	5100 1950 5100 2100
+Wire Wire Line
+	5100 1350 5100 1650
+Wire Wire Line
+	5400 1350 5400 1650
+Wire Wire Line
+	5400 2100 5400 1950
+Wire Wire Line
+	4500 3450 5750 3450
+Wire Wire Line
+	4500 3350 5800 3350
+Wire Wire Line
+	6800 4850 6800 3600
+Wire Wire Line
+	6800 3600 6000 3600
+Wire Wire Line
+	6000 3600 6000 3250
+Wire Wire Line
+	6000 3250 4500 3250
+Wire Wire Line
+	7150 4100 7150 4000
+Connection ~ 7400 4000
+Wire Wire Line
+	7150 4400 7150 4600
+Connection ~ 7400 4600
+Wire Wire Line
+	6350 4350 6200 4350
+Wire Wire Line
+	2600 3100 2600 5350
+Wire Wire Line
+	2600 5350 4750 5350
+Wire Wire Line
+	4750 5350 4750 4950
+Wire Wire Line
+	4900 5600 4900 5750
+Wire Wire Line
+	4900 3750 4900 5400
+Wire Wire Line
+	4900 3750 4500 3750
+Wire Wire Line
+	4500 4050 5600 4050
+Wire Wire Line
+	6550 2850 6250 2850
+Wire Wire Line
+	6550 2750 6450 2750
+Wire Wire Line
+	6450 2750 6450 2500
+Wire Wire Line
+	6450 2500 6250 2500
+Connection ~ 6250 2500
+Wire Wire Line
+	7600 2650 7700 2650
+Wire Wire Line
+	4800 2550 4800 2400
+Wire Wire Line
+	5100 2850 5100 2400
+Wire Wire Line
+	5400 2950 5400 2400
+Wire Wire Line
+	5800 3350 5800 3750
+Wire Wire Line
+	5750 3450 5750 4050
+Wire Wire Line
+	5700 3550 5700 4350
+Wire Wire Line
+	5600 4050 5600 3050
+Wire Wire Line
+	5700 1350 5700 1650
+Wire Wire Line
+	5700 2100 5700 1950
+Wire Wire Line
+	5700 2400 5700 2950
+Wire Wire Line
+	5700 2950 5450 2950
+Wire Wire Line
+	5450 2950 5450 3050
+Wire Wire Line
+	5450 3050 4500 3050
+Wire Wire Line
+	6550 2150 6550 2550
+Wire Wire Line
+	7700 2650 7700 2150
+Wire Wire Line
+	3050 1350 6250 1350
+Connection ~ 5700 1350
+Connection ~ 5400 1350
+Connection ~ 5100 1350
+Connection ~ 4800 1350
+Wire Wire Line
+	2600 3100 3150 3100
+Wire Wire Line
+	3150 2850 3050 2850
+Connection ~ 3050 2850
+Connection ~ 3050 3100
+Wire Wire Line
+	6250 1200 6250 2550
+Connection ~ 6250 1350
+Wire Wire Line
+	5250 5100 5400 5100
+Wire Wire Line
+	4750 4950 5400 4950
+Wire Wire Line
+	4950 5100 4900 5100
+Connection ~ 4900 5100
+$Comp
+L GND #PWR4
+U 1 1 5E8126CD
+P 5400 5350
+F 0 "#PWR4" H 5400 5100 50  0001 C CNN
+F 1 "GND" H 5400 5200 50  0000 C CNN
+F 2 "" H 5400 5350 50  0001 C CNN
+F 3 "" H 5400 5350 50  0001 C CNN
+	1    5400 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 5350 5400 5250
+$Comp
+L R R3
+U 1 1 5E812F03
+P 5250 5450
+F 0 "R3" V 5350 5450 50  0000 C CNN
+F 1 "10k" V 5250 5450 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5180 5450 50  0001 C CNN
+F 3 "" H 5250 5450 50  0001 C CNN
+	1    5250 5450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5250 5300 5250 5100
+$Comp
+L GND #PWR3
+U 1 1 5E813004
+P 5250 5750
+F 0 "#PWR3" H 5250 5500 50  0001 C CNN
+F 1 "GND" H 5250 5600 50  0000 C CNN
+F 2 "" H 5250 5750 50  0001 C CNN
+F 3 "" H 5250 5750 50  0001 C CNN
+	1    5250 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 5750 5250 5600
+$EndSCHEMATC
